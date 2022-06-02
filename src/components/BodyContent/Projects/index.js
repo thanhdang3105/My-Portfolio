@@ -25,46 +25,6 @@ const listProjects = [
       src: 'https://github.com/thanhdang3105/MessageFake',
       demo: 'https://thanhdang3105.github.io/MessageFake'
     }
-  },
-  {
-    img: `${process.env.PUBLIC_URL}/img/Todo_Redux.png`, 
-    name: 'Todo', 
-    desc: 'Ứng dụng ghi chú các việc cần làm.', 
-    techs: ['Sass','Html','antd','Javascript','React','Redux'], 
-    url: {
-      src: 'https://github.com/thanhdang3105/VD_Redux',
-      demo: 'https://thanhdang3105.github.io/VD_Redux/'
-    }
-  },
-  {
-    img: `${process.env.PUBLIC_URL}/img/Todo_Redux.png`, 
-    name: 'Todo', 
-    desc: 'Ứng dụng ghi chú các việc cần làm.', 
-    techs: ['Sass','Html','antd','Javascript','React','Redux'], 
-    url: {
-      src: 'https://github.com/thanhdang3105/VD_Redux',
-      demo: 'https://thanhdang3105.github.io/VD_Redux/'
-    }
-  },
-  {
-    img: `${process.env.PUBLIC_URL}/img/Todo_Redux.png`, 
-    name: 'Todo', 
-    desc: 'Ứng dụng ghi chú các việc cần làm.', 
-    techs: ['Sass','Html','antd','Javascript','React','Redux'], 
-    url: {
-      src: 'https://github.com/thanhdang3105/VD_Redux',
-      demo: 'https://thanhdang3105.github.io/VD_Redux/'
-    }
-  },
-  {
-    img: `${process.env.PUBLIC_URL}/img/Todo_Redux.png`, 
-    name: 'Todo', 
-    desc: 'Ứng dụng ghi chú các việc cần làm.', 
-    techs: ['Sass','Html','antd','Javascript','React','Redux'], 
-    url: {
-      src: 'https://github.com/thanhdang3105/VD_Redux',
-      demo: 'https://thanhdang3105.github.io/VD_Redux/'
-    }
   }
 ]
 
