@@ -31,14 +31,15 @@ export default function CreatorInfo({setState}) {
     const image = imgRef.current
     const hiddenClass = cx('hidden')
     const root = document.getElementById('root')
+    console.log(e)
 
     image.classList.contains(hiddenClass) && setState(true)
     
     if(deltaY < 0 && root.scrollTop <= 0 && image.classList.contains(hiddenClass)) {
-      handleRemoveClassHidden()
+    handleRemoveClassHidden()
     }
     else if(deltaY > 0 && !image.classList.contains(hiddenClass)){
-      handleAddClassHidden()
+    handleAddClassHidden()
     }
   }
   return (

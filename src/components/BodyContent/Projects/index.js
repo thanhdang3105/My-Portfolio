@@ -73,7 +73,7 @@ function Projects({ scrollView }) {
   return (
     <div id='projects' className={cx('project_wrapper')}>
       <h1 className={cx('project_heading')}>Sản phẩm</h1>
-      <ul ref={listRef} className={`${cx('project_list')} ${show ? 'transformBottom' : ''}`} onMouseDown={(e) => swipeList(e,listRef.current,pageX,setPageX)}>
+      <ul ref={listRef} className={`${cx('project_list')} ${show ? 'transformBottom' : ''}`} style={listProjects.length <= 4 ? {justifyContent: 'center',overflowX: 'hidden'} : {}} onMouseDown={(e) => swipeList(e,listRef.current,pageX,setPageX)}>
         {listProjects.map((project,index) => (
           <Project key={index} {...project} eventSwipe={swipeList}/>
         ))}
