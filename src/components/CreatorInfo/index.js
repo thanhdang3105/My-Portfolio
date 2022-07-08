@@ -31,7 +31,6 @@ export default function CreatorInfo({setState}) {
     const image = imgRef.current
     const hiddenClass = cx('hidden')
     const root = document.getElementById('root')
-    console.log(e)
 
     image.classList.contains(hiddenClass) && setState(true)
     
@@ -45,7 +44,7 @@ export default function CreatorInfo({setState}) {
   return (
     <div className={cx('creator_info')} ref={imgRef}>
         <div className={cx('avatar_box')}>
-                <img className={cx('avatar')} alt='avatar' src={`${process.env.PUBLIC_URL}/img/anh.png`}/>
+                <img className={cx('avatar')} alt='avatar' src={`${process.env.PUBLIC_URL}/img/anh-1.png`}/>
         </div>
         <div className={cx('info')}>
           <h2 className={cx('info_name')}>Đặng Hữu Thanh</h2>

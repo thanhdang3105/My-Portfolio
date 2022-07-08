@@ -44,7 +44,7 @@ function Contact({ scrollView }) {
         <h1 className={cx('Contact_heading')}>Liên hệ</h1>
         <div ref={ref} className={cx('Contact_body')}>
             <div className={`${cx('image_box')} ${show ? 'transformTop' : ''}`}>
-                <img className={cx('image')} src={`${process.env.PUBLIC_URL}/img/anh.png`} alt='logo' />
+                <img className={cx('image')} src={`${process.env.PUBLIC_URL}/img/anh_the1.jpg`} alt='logo' />
             </div>
             <ul className={`${cx('contact_box')} ${show ? 'transformLeft' : ''}`}>
                 {contact.map((info,index) => (

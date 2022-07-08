@@ -42,8 +42,11 @@
                     border-radius: 50%;
                     width: 200px;
                     height: 200px;
+                    object-fit: cover;
+                    object-position: top;
+                    image-rendering: pixelated;
                     -webkit-user-drag: none;
-                    background-color: rgb(2, 16, 46);
+                    background-color: rgb(228, 228, 228);
                     z-index: 1;
                 }
             

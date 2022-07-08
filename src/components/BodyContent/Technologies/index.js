@@ -22,7 +22,9 @@ function Technologies({ scrollView }) {
   return (
     <div id="technologies" className={cx('tech_wrapper')}>
         <h1 className={cx('tech_heading')}>Kỹ năng</h1>
+        <div className={cx('tech_wrapper-desc')}>
         <span className={cx('tech_desc')}>Đây là một số công nghệ mà tôi đã học được <br/>cho đến nay thông qua một số dự án và khóa học nhỏ.</span>
+        </div>
         <div ref={ref} className={cx('list_tech')}>
             <div className={`${cx('wrapper_techList')} ${show ? 'transformLeft' : ''}`}>
                 <h1>DOM WORLD</h1>

@@ -7,6 +7,16 @@ const cx = className.bind(styles)
 
 const listProjects = [
   {
+    img: `${process.env.PUBLIC_URL}/img/Myshop.png`, 
+    name: 'My Shop', 
+    desc: 'Trang bán hàng quần áo giày dép.', 
+    techs: ['Html','Scss','Antd','Javascript','React','Redux','firebase','ExpressJs','MongoDB'], 
+    url: {
+      src: 'https://github.com/thanhdang3105/MyshopClient',
+      demo: 'https://myshop31.vercel.app/'
+    }
+  },
+  {
     img: `${process.env.PUBLIC_URL}/img/Todo_Redux.png`, 
     name: 'Todo', 
     desc: 'Ứng dụng ghi chú các việc cần làm.', 
@@ -73,7 +83,7 @@ function Projects({ scrollView }) {
   return (
     <div id='projects' className={cx('project_wrapper')}>
       <h1 className={cx('project_heading')}>Sản phẩm</h1>
-      <ul style={listProjects.length <= 4 ? {justifyContent: 'center',overflowX: 'hidden'} : {}} ref={listRef} className={`${cx('project_list')} ${show ? 'transformBottom' : ''}`} onMouseDown={(e) => swipeList(e,listRef.current,pageX,setPageX)}>
+      <ul ref={listRef} className={`${listProjects.length <= 4 ? cx('justifyCenter') : ''} ${cx('project_list')} ${show ? 'transformBottom' : ''}`} onMouseDown={(e) => swipeList(e,listRef.current,pageX,setPageX)}>
         {listProjects.map((project,index) => (
           <Project key={index} {...project} eventSwipe={swipeList}/>
         ))}
