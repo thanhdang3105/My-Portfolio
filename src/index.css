@@ -25,6 +25,7 @@ html{
   --header-height: 10vh;
   --default-width: 1200px;
   --background-img: url('Background.png');
+  --background-text: #02102e;
 }
 
 *::-webkit-scrollbar{
