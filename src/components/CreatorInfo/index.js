@@ -8,39 +8,67 @@ const cx = className.bind(styles)
 export default function CreatorInfo({setState}) {
     const imgRef = React.useRef()
 
-    const handleRemoveClassHidden = () => {
+    const handleRemoveClassHidden = React.useCallback(() => {
       const image = imgRef.current
       const hiddenClass = cx('hidden')
       image.classList.remove(hiddenClass)
-        image.parentElement.classList.add('begin')
-        setTimeout(() => {
-            setState(false)
-        }, 500)
-    }
+      image.parentElement.classList.add('begin')
+      setTimeout(() => {
+          setState(false)
+      }, 400)
+    },[setState])
 
-    const handleAddClassHidden = () => {
+    const handleAddClassHidden = React.useCallback(() => {
       const image = imgRef.current
       const hiddenClass = cx('hidden')
-      setState(true)
+      setTimeout(() => {
+        setState(true)
+      }, 400)
       image.classList.add(hiddenClass)
       image.parentElement.classList.remove('begin')
-    }
+    },[setState])
 
-  document.onwheel = (e) => {
-    const {deltaY} = e
-    const image = imgRef.current
-    const hiddenClass = cx('hidden')
-    const root = document.getElementById('root')
-
-    image.classList.contains(hiddenClass) && setState(true)
+    React.useEffect(() => {
+      if(navigator.userAgent.search('Windows') > 0){
+        document.onwheel = (e) => {
+          const {deltaY} = e
+          const image = imgRef.current
+          const hiddenClass = cx('hidden')
+          const root = document.getElementById('root')
     
-    if(deltaY < 0 && root.scrollTop <= 0 && image.classList.contains(hiddenClass)) {
-    handleRemoveClassHidden()
-    }
-    else if(deltaY > 0 && !image.classList.contains(hiddenClass)){
-    handleAddClassHidden()
-    }
-  }
+          image.classList.contains(hiddenClass) && setState(true)
+          
+          if(deltaY < 0 && root.scrollTop <= 0 && image.classList.contains(hiddenClass)) {
+            handleRemoveClassHidden()
+          }
+          else if(deltaY > 0 && !image.classList.contains(hiddenClass)){
+            handleAddClassHidden()
+          }
+        }
+      }else{
+        let start = 0
+        document.ontouchstart = (e) => {
+          start = Math.round(e.changedTouches['0'].clientY)
+        }
+
+        document.ontouchend = (e) => {
+          const touch = Math.round(e.changedTouches['0'].clientY) - start
+          const image = imgRef.current
+          const hiddenClass = cx('hidden')
+          const root = document.getElementById('root')
+    
+          image.classList.contains(hiddenClass) && setState(true)
+          
+          if(touch > 0 && root.scrollTop <= 0 && image.classList.contains(hiddenClass)) {
+            handleRemoveClassHidden()
+          }
+          else if(touch < 0 && !image.classList.contains(hiddenClass)){
+            handleAddClassHidden()
+          }
+        }
+      }
+    },[handleAddClassHidden,handleRemoveClassHidden,setState])
+
   return (
     <div className={cx('creator_info')} ref={imgRef}>
         <div className={cx('avatar_box')}>

@@ -59,9 +59,27 @@ function Technologies({ scrollView }) {
                         Redux
                     </li>
                     <li className={cx('item')}>
+                        <img alt='icon_nodejs' src={`${process.env.PUBLIC_URL}/icon/nodejs.svg`}/>
+                        Nodejs
+                    </li>
+                    <li className={cx('item')}>
                         <img alt='icon_antd' src={`${process.env.PUBLIC_URL}/icon/antd.png`}/>
                         Ant Design
                     </li>
+                </ul>
+            </div>
+            <div className={`${cx('wrapper_techList')} ${show ? 'transformBottom' : ''}`}>
+                <h1>Databse/ Authentication</h1>
+                <ul className={cx('list')}>
+                    <li className={cx('item')}>
+                        <img alt='icon_mongo' src={`${process.env.PUBLIC_URL}/icon/mongodb.svg`}/>
+                        MongoDB
+                    </li>
+                    <li className={cx('item')}>
+                        <img alt='icon_firebase' src={`${process.env.PUBLIC_URL}/icon/firebase.png`}/>
+                        Firebase
+                    </li>
+                    
                 </ul>
             </div>
         </div>

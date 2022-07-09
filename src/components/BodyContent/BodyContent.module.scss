@@ -75,7 +75,8 @@
         .list_tech{
             display: flex;
             gap: 20px;
-            justify-content: space-between;
+            flex-wrap: wrap;
+            justify-content: center;
             transition: all 2s linear;
             h1{
                 border-bottom: 1px solid #fff;
