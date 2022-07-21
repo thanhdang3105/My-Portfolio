@@ -4,6 +4,61 @@ import className from 'classnames/bind';
 
 const cx = className.bind(styles)
 
+const fontend = [
+    {
+        name: 'Html',
+        src: 'html.svg'
+    },
+    {
+        name: 'Css',
+        src: 'css.svg'
+    },
+    {
+        name: 'JavaScript',
+        src: 'javaScript.svg'
+    },
+    {
+        name: 'Sass',
+        src: 'sass.svg'
+    }
+]
+const backend = [
+    {
+        name: 'MongoDB',
+        src: 'mongodb.svg'
+    },
+    {
+        name: 'Firebase',
+        src: 'firebase.png'
+    }
+]
+const libraries = [
+    {
+        name: 'React JS',
+        src: 'reactJs.svg'
+    },
+    {
+        name: 'Redux',
+        src: 'redux.svg'
+    },
+    {
+        name: 'Nodejs',
+        src: 'nodejs.svg'
+    },
+    {
+        name: 'Ant Design',
+        src: 'antd.png'
+    },
+    {
+        name: 'Material',
+        src: 'material.svg'
+    },
+    {
+        name: 'Socket.IO',
+        src: 'socket-io.svg'
+    },
+]
+
 function Technologies({ scrollView }) {
     const [show,setShow] = React.useState(false)
 
@@ -29,57 +84,35 @@ function Technologies({ scrollView }) {
             <div className={`${cx('wrapper_techList')} ${show ? 'transformLeft' : ''}`}>
                 <h1>DOM WORLD</h1>
                 <ul className={cx('list')}>
-                    <li className={cx('item')}>
-                        <img alt='icon_html' src={`${process.env.PUBLIC_URL}/icon/html.svg`}/>
-                        Html
-                    </li>
-                    <li className={cx('item')}>
-                        <img alt='icon_css' src={`${process.env.PUBLIC_URL}/icon/css.svg`}/>
-                        Css
-                    </li>
-                    <li className={cx('item')}>
-                        <img alt='icon_js' src={`${process.env.PUBLIC_URL}/icon/javascript.svg`}/>
-                        JavaScript
-                    </li>
-                    <li className={cx('item')}>
-                        <img alt='icon_sass' src={`${process.env.PUBLIC_URL}/icon/sass.svg`}/>
-                        Sass
-                    </li>
+                {fontend.map((item,index) => (
+                        <li key={index} className={cx('item')}>
+                            <img alt={item.name} src={`${process.env.PUBLIC_URL}/icon/${item.src}`}/>
+                            {item.name}
+                        </li>
+                    ))}
+                    
                 </ul>
             </div>
             <div className={`${cx('wrapper_techList')} ${show ? 'transformRight' : ''}`}>
-                <h1>Libraries/ Frameworks</h1>
+                <h1>Databse/ Authentication</h1>
                 <ul className={cx('list')}>
-                    <li className={cx('item')}>
-                        <img alt='icon_react' src={`${process.env.PUBLIC_URL}/icon/reactJs.svg`}/>
-                        React JS
-                    </li>
-                    <li className={cx('item')}>
-                        <img alt='icon_redux' src={`${process.env.PUBLIC_URL}/icon/redux.svg`}/>
-                        Redux
-                    </li>
-                    <li className={cx('item')}>
-                        <img alt='icon_nodejs' src={`${process.env.PUBLIC_URL}/icon/nodejs.svg`}/>
-                        Nodejs
-                    </li>
-                    <li className={cx('item')}>
-                        <img alt='icon_antd' src={`${process.env.PUBLIC_URL}/icon/antd.png`}/>
-                        Ant Design
-                    </li>
+                {backend.map((item,index) => (
+                        <li key={index} className={cx('item')}>
+                            <img alt={item.name} src={`${process.env.PUBLIC_URL}/icon/${item.src}`}/>
+                            {item.name}
+                        </li>
+                    ))}
                 </ul>
             </div>
             <div className={`${cx('wrapper_techList')} ${show ? 'transformBottom' : ''}`}>
-                <h1>Databse/ Authentication</h1>
+                <h1>Libraries/ Frameworks</h1>
                 <ul className={cx('list')}>
-                    <li className={cx('item')}>
-                        <img alt='icon_mongo' src={`${process.env.PUBLIC_URL}/icon/mongodb.svg`}/>
-                        MongoDB
-                    </li>
-                    <li className={cx('item')}>
-                        <img alt='icon_firebase' src={`${process.env.PUBLIC_URL}/icon/firebase.png`}/>
-                        Firebase
-                    </li>
-                    
+                    {libraries.map((item,index) => (
+                        <li key={index} className={cx('item')}>
+                            <img alt={item.name} src={`${process.env.PUBLIC_URL}/icon/${item.src}`}/>
+                            {item.name}
+                        </li>
+                    ))}
                 </ul>
             </div>
         </div>

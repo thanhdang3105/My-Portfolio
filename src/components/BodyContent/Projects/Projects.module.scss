@@ -37,7 +37,7 @@
             display: flex;
             flex-direction: column;
             width: 25%;
-            background-color: rgb(46,50,79,0.7);
+            background-color: rgba(2, 16, 46, 0.9);
             padding: 15px;
             gap: 20px;
             border: 1px solid white;
@@ -45,7 +45,7 @@
             font-size: 1.8rem;
             transition: all 0.3s linear;
             &:hover{
-                background-color: rgba(2, 16, 46, 0.9);
+                background-color: rgb(2, 16, 46);
             }
            
             .item_imageBox{
@@ -74,15 +74,12 @@
                 }
             }
             .project_description{
-                line-height: 1.8rem;
-                height: calc(1.8rem * 6);
+                line-height: 2rem;
+                height: calc(2rem * 6);
                 justify-self: center;
                 display: block;
                 display: -webkit-box;
-                overflow: hidden;
-                -webkit-box-orient: vertical;
-                -webkit-line-clamp: 6;
-                -webkit-box-align: center;
+                overflow-y: auto;
             }
             .justifyCenter{
                 justify-content: center;

@@ -9,7 +9,9 @@ const listProjects = [
   {
     img: `${process.env.PUBLIC_URL}/img/Myshop.png`, 
     name: 'My Shop', 
-    desc: 'Trang bán hàng quần áo giày dép.', 
+    desc: `Trang bán hàng quần áo giày dép.
+    Có chức năng đăng nhập, giỏ hàng.
+    Trang admin để thêm sửa xoá sản phẩm và theo dõi đơn hàng.`, 
     techs: ['Html','Scss','Antd','Javascript','React','Redux','firebase','ExpressJs','MongoDB'], 
     url: {
       src: 'https://github.com/thanhdang3105/MyshopClient',
@@ -28,12 +30,15 @@ const listProjects = [
   },
   {
     img: `${process.env.PUBLIC_URL}/img/Chat_App.png`, 
-    name: 'Messenger', 
-    desc: 'Ứng dụng chat nhóm.', 
-    techs: ['Sass','Html','antd','Javascript','React','Firebase'], 
+    name: 'My Chat App', 
+    desc: `Ứng dụng chat Realtime. Có thể inbox riêng hoặc tạo phòng chat nhiều người.
+    Đăng nhập bằng tài khoản tự tạo hoặc qua google, facebook.
+    Có thể đổi thông tin tài khoản, background.
+    Có tính năng thông báo tin nhắn mới.`, 
+    techs: ['Sass','Html','Material','Javascript','React','Firebase','Redux','Socket.IO','ExpressJs','MongoDB'], 
     url: {
-      src: 'https://github.com/thanhdang3105/MessageFake',
-      demo: 'https://thanhdang3105.github.io/MessageFake'
+      src: 'https://github.com/thanhdang3105/MyChatApp-client',
+      demo: 'https://mychatapp31.netlify.app'
     }
   }
 ]
