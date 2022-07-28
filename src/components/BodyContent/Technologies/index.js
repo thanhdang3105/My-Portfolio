@@ -15,7 +15,7 @@ const fontend = [
     },
     {
         name: 'JavaScript',
-        src: 'javaScript.svg'
+        src: 'javascript.svg'
     },
     {
         name: 'Sass',

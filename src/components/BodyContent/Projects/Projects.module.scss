@@ -145,8 +145,7 @@
                     font-size: 2rem;
                 }
                 .project_description{
-                    height: fit-content;
-                    min-height: calc(1.8rem * 3);
+                    height: calc(2rem * 3);
                     display: unset;
                     overflow-y: auto;
                 }
@@ -174,7 +173,8 @@
                 }
                 .project_description{
                     font-size: 1.6rem;
-                    min-height: calc(1.6rem * 3);
+                    line-height: 1.6rem;
+                    height: calc(1.6rem * 3);
                 }
                 
             }

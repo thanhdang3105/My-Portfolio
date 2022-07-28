@@ -7,6 +7,16 @@ const cx = className.bind(styles)
 
 const listProjects = [
   {
+    img: `${process.env.PUBLIC_URL}/img/Todo_Redux.png`, 
+    name: 'Todo', 
+    desc: 'Ứng dụng ghi chú các việc cần làm.', 
+    techs: ['Sass','Html','antd','Javascript','React','Redux'], 
+    url: {
+      src: 'https://github.com/thanhdang3105/VD_Redux',
+      demo: 'https://thanhdang3105.github.io/VD_Redux/'
+    }
+  },
+  {
     img: `${process.env.PUBLIC_URL}/img/Myshop.png`, 
     name: 'My Shop', 
     desc: `Trang bán hàng quần áo giày dép.
@@ -16,16 +26,6 @@ const listProjects = [
     url: {
       src: 'https://github.com/thanhdang3105/MyshopClient',
       demo: 'https://myshop31.vercel.app/'
-    }
-  },
-  {
-    img: `${process.env.PUBLIC_URL}/img/Todo_Redux.png`, 
-    name: 'Todo', 
-    desc: 'Ứng dụng ghi chú các việc cần làm.', 
-    techs: ['Sass','Html','antd','Javascript','React','Redux'], 
-    url: {
-      src: 'https://github.com/thanhdang3105/VD_Redux',
-      demo: 'https://thanhdang3105.github.io/VD_Redux/'
     }
   },
   {
